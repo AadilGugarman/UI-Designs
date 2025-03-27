@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card Checkout</title>
+    <link rel="stylesheet" href="signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h1>Payment Details</h1>
+        <p class="subtitle">Please enter your credit card information</p>
+
+        <form id="payment-form">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="cardholder" required />
+            <label for="cardholder">Cardholder Name</label>
+          </div>
+
+          <div class="input-group">
+            <i class="fas fa-credit-card"></i>
+            <input
+              type="text"
+              id="cardnumber"
+              maxlength="19"
+              pattern="\d{4}\s\d{4}\s\d{4}\s\d{4}"
+              required
+            />
+            <label for="cardnumber">Card Number</label>
+          </div>
+
+          <div style="display: flex; gap: 20px">
+            <div class="input-group" style="flex: 1">
+              <i class="fas fa-calendar"></i>
+              <input
+                type="text"
+                id="expiry"
+                maxlength="5"
+                pattern="\d{2}/\d{2}"
+                required
+              />
+              <label for="expiry">Expiry Date (MM/YY)</label>
+            </div>
+
+            <div class="input-group" style="flex: 1">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                id="cvv"
+                maxlength="4"
+                pattern="\d{3,4}"
+                required
+              />
+              <label for="cvv">CVV</label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" id="billing-address" required />
+            <label for="billing-address">Billing Address</label>
+          </div>
+
+          <div class="input-group">
+            <i class="fas fa-city"></i>
+            <input type="text" id="city" required />
+            <label for="city">City</label>
+          </div>
+
+          <div style="display: flex; gap: 20px">
+            <div class="input-group" style="flex: 1">
+              <i class="fas fa-globe"></i>
+              <input type="text" id="state" required />
+              <label for="state">State</label>
+            </div>
+
+            <div class="input-group" style="flex: 1">
+              <i class="fas fa-mail-bulk"></i>
+              <input type="text" id="zip" pattern="\d{5}" required />
+              <label for="zip">ZIP Code</label>
+            </div>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="save-card" />
+            <label for="save-card">Save card for future payments</label>
+          </div>
+
+          <button type="submit">Pay Now</button>
+        </form>
+
+        <div class="benefits">
+          <h3>Secure Payment</h3>
+          <ul>
+            <li><i class="fas fa-lock"></i> 256-bit SSL encryption</li>
+            <li><i class="fas fa-shield-alt"></i> PCI DSS compliant</li>
+            <li><i class="fas fa-undo"></i> Money-back guarantee</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  .form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .input-group {
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  .input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+  }
+
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px 35px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #667eea;
+    outline: none;
+  }
+
+  .input-group label {
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+
+  .input-group input:focus ~ label,
+  .input-group input:valid ~ label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    background: white;
+    padding: 0 5px;
+    color: #667eea;
+  }
+
+  .checkbox-group {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .checkbox-group label {
+    color: #666;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  button:hover {
+    transform: translateY(-2px);
+  }
+
+  .benefits {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+  }
+
+  .benefits h3 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .benefits ul {
+    list-style: none;
+  }
+
+  .benefits li {
+    color: #666;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .benefits i {
+    color: #667eea;
+  }
+</style>

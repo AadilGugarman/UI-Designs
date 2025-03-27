@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30-Day Fitness Challenge Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h1>Join the 30-Day Fitness Challenge</h1>
+        <p class="subtitle">
+          Transform your life with our comprehensive fitness program!
+        </p>
+
+        <form id="signup-form">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" required />
+            <label for="name">Full Name</label>
+          </div>
+
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" required />
+            <label for="email">Email Address</label>
+          </div>
+
+          <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input type="tel" id="phone" required />
+            <label for="phone">Phone Number</label>
+          </div>
+
+          <div class="input-group">
+            <i class="fas fa-dumbbell"></i>
+            <select id="fitness-level" required>
+              <option value="">Select Fitness Level</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" required />
+            <label for="terms">I agree to the terms and conditions</label>
+          </div>
+
+          <button type="submit">Sign Up Now</button>
+        </form>
+
+        <div class="benefits">
+          <h3>What you'll get:</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Personalized workout plans</li>
+            <li><i class="fas fa-check"></i> Nutrition guidance</li>
+            <li><i class="fas fa-check"></i> Daily motivation</li>
+            <li><i class="fas fa-check"></i> Community support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  .form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .input-group {
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  .input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+  }
+
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 12px 35px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+
+  .input-group input:focus,
+  .input-group select:focus {
+    border-color: #667eea;
+    outline: none;
+  }
+
+  .input-group label {
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+
+  .input-group input:focus ~ label,
+  .input-group input:valid ~ label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    background: white;
+    padding: 0 5px;
+    color: #667eea;
+  }
+
+  .checkbox-group {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .checkbox-group label {
+    color: #666;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  button:hover {
+    transform: translateY(-2px);
+  }
+
+  .benefits {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+  }
+
+  .benefits h3 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  .benefits ul {
+    list-style: none;
+  }
+  .benefits li {
+    color: #666;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .benefits i {
+    color: #667eea;
+  }
+</style>

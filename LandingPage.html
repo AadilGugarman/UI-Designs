@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Payment Processing | PaySafe</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="paysafe logo.png" alt="PaySafe Logo" />
+        </div>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/signup" class="cta-button">Get Started</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Accept Payments Securely & Effortlessly</h1>
+          <p class="subtitle">
+            Streamline your payment processing with bank-grade security and
+            seamless integration
+          </p>
+          <div class="cta-group">
+            <a href="/signup" class="primary-button">Start Free Trial</a>
+            <a href="#demo" class="secondary-button">Watch Demo</a>
+          </div>
+          <div class="trust-badges">
+            <span><i class="fas fa-shield-alt"></i> PCI DSS Certified</span>
+            <span><i class="fas fa-lock"></i> 256-bit Encryption</span>
+            <span><i class="fas fa-check-circle"></i> 99.99% Uptime</span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="dashboard-preview.png" alt="PaySafe Dashboard" />
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <h2>Why Choose PaySafe?</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Quick Setup</h3>
+            <p>Get started in minutes with our simple integration process</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-globe"></i>
+            <h3>Global Coverage</h3>
+            <p>
+              Accept payments from customers worldwide in multiple currencies
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Real-time Analytics</h3>
+            <p>Track transactions and monitor business growth in real-time</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>Expert support team available round the clock</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/security">Security</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/compliance">Compliance</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 PaySafe. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 5%;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+      .logo img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .cta-button {
+        background: #667eea;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        padding: 5rem 5%;
+        background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+      }
+
+      .hero-content {
+        flex: 1;
+        max-width: 600px;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .subtitle {
+        font-size: 1.25rem;
+        color: #666;
+        margin-bottom: 2rem;
+      }
+
+      .cta-group {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .primary-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.3s;
+      }
+
+      .secondary-button {
+        border: 2px solid #667eea;
+        color: #667eea;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .trust-badges {
+        display: flex;
+        gap: 2rem;
+        color: #666;
+      }
+
+      .trust-badges span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .features {
+        padding: 5rem 5%;
+        text-align: center;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .feature-card {
+        padding: 2rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-card i {
+        font-size: 2rem;
+        color: #667eea;
+        margin-bottom: 1rem;
+      }
+
+      footer {
+        background: #f5f7ff;
+        padding: 4rem 5% 2rem;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-section h4 {
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      .footer-section ul {
+        list-style: none;
+      }
+
+      .footer-section a {
+        color: #666;
+        text-decoration: none;
+        line-height: 2;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid #ddd;
+        color: #666;
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .hero-image {
+          margin-top: 2rem;
+        }
+
+        .trust-badges {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        nav ul {
+          display: none;
+        }
+      }
+    </style>
+  </body>
+</html>
