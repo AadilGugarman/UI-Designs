@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scientific Calculator</title>
+    <style>
+      .calculator {
+        width: 320px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #f4f4f4;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #display {
+        width: 100%;
+        height: 60px;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 24px;
+        text-align: right;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+      }
+
+      button {
+        padding: 15px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        background: #e0e0e0;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background: #d0d0d0;
+      }
+
+      .operator {
+        background: #ff9500;
+        color: white;
+      }
+
+      .function {
+        background: #757575;
+        color: white;
+      }
+
+      .equals {
+        background: #2196f3;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="display" readonly />
+      <div class="buttons">
+        <!-- Scientific Functions -->
+        <button class="function">sin</button>
+        <button class="function">cos</button>
+        <button class="function">tan</button>
+        <button class="function">√</button>
+
+        <button class="function">log</button>
+        <button class="function">ln</button>
+        <button class="function">π</button>
+        <button class="function">e</button>
+
+        <!-- Numbers and Basic Operators -->
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="operator">÷</button>
+
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="operator">×</button>
+
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="operator">-</button>
+
+        <button>0</button>
+        <button>.</button>
+        <button class="equals">=</button>
+        <button class="operator">+</button>
+      </div>
+    </div>
+  </body>
+</html>

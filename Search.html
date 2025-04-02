@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Search</title>
+    <!-- 
+      Search Design
+      Prompt: Search
+
+      Design something search related. It could be a search bar, an advanced 
+      search window, or a search function. It could even be a page to search 
+      for hotel rooms, homes for sale, plane tickets, concert seats, or 
+      something else.
+    -->
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: linear-gradient(135deg, #1e4d92, #2c3e50);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .search-container {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 800px;
+      }
+
+      .search-header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .search-header h1 {
+        color: #1e4d92;
+        margin: 0 0 10px 0;
+      }
+
+      .search-header p {
+        color: #666;
+        margin: 0;
+      }
+
+      .search-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border-color 0.2s;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: #1e4d92;
+      }
+
+      .full-width {
+        grid-column: 1 / -1;
+      }
+
+      .search-button {
+        background: #1e4d92;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+        width: 100%;
+      }
+
+      .search-button:hover {
+        background: #153a70;
+      }
+
+      .advanced-filters {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+      }
+
+      .filter-title {
+        color: #666;
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+
+      .filter-options {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .filter-option {
+        background: #f5f7fa;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .filter-option:hover {
+        background: #e1e5eb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search-container">
+      <div class="search-header">
+        <h1>Find Your Perfect Flight</h1>
+        <p>Search thousands of flights to find the best deals</p>
+      </div>
+
+      <form class="search-form">
+        <div class="form-group">
+          <label>From</label>
+          <input type="text" placeholder="Departure city or airport" />
+        </div>
+
+        <div class="form-group">
+          <label>To</label>
+          <input type="text" placeholder="Arrival city or airport" />
+        </div>
+
+        <div class="form-group">
+          <label>Departure Date</label>
+          <input type="date" />
+        </div>
+
+        <div class="form-group">
+          <label>Return Date</label>
+          <input type="date" />
+        </div>
+
+        <div class="form-group">
+          <label>Passengers</label>
+          <select>
+            <option>1 Passenger</option>
+            <option>2 Passengers</option>
+            <option>3 Passengers</option>
+            <option>4+ Passengers</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Class</label>
+          <select>
+            <option>Economy</option>
+            <option>Premium Economy</option>
+            <option>Business</option>
+            <option>First Class</option>
+          </select>
+        </div>
+
+        <div class="full-width">
+          <button type="submit" class="search-button">Search Flights</button>
+        </div>
+
+        <div class="advanced-filters full-width">
+          <div class="filter-title">Popular Filters</div>
+          <div class="filter-options">
+            <div class="filter-option">Direct flights only</div>
+            <div class="filter-option">Price < $500</div>
+            <div class="filter-option">Morning departure</div>
+            <div class="filter-option">Evening departure</div>
+            <div class="filter-option">Refundable</div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

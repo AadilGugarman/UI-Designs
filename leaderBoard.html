@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Sellers Leaderboard</title>
+    <!-- 
+      Leaderboard Design
+      Prompt: Leaderboard
+
+      Is it for gaming, sports, racing, politics, top sellers, the highest grossing movies, or something else?
+      Consider the important statistics to show, percentages, points, avatar pictures or logos, and the most critical elements.
+      (Don't overwhelm the users with too much information)
+    -->
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: #f8f9fa;
+        min-height: 100vh;
+      }
+
+      .leaderboard {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .leaderboard-header {
+        background: #1a1a2e;
+        color: white;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .leaderboard-title {
+        margin: 0;
+        font-size: 28px;
+      }
+
+      .leaderboard-period {
+        color: #a0a0b0;
+        font-size: 16px;
+        margin-top: 8px;
+      }
+
+      .leader-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .leader-item {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid #eee;
+        transition: background-color 0.2s;
+      }
+
+      .leader-item:hover {
+        background-color: #f8f9fa;
+      }
+
+      .rank {
+        font-size: 24px;
+        font-weight: bold;
+        color: #1a1a2e;
+        width: 50px;
+        text-align: center;
+      }
+
+      .seller-info {
+        display: flex;
+        align-items: center;
+        flex: 1;
+      }
+
+      .seller-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+        object-fit: cover;
+      }
+
+      .seller-details {
+        flex: 1;
+      }
+
+      .seller-name {
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .seller-category {
+        color: #666;
+        font-size: 14px;
+        margin: 4px 0 0;
+      }
+
+      .stats {
+        text-align: right;
+      }
+
+      .sales-amount {
+        font-size: 20px;
+        font-weight: bold;
+        color: #2ecc71;
+        margin: 0;
+      }
+
+      .growth {
+        color: #2ecc71;
+        font-size: 14px;
+        margin: 4px 0 0;
+      }
+
+      .top-3 .rank {
+        color: #ffd700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="leaderboard">
+      <div class="leaderboard-header">
+        <h1 class="leaderboard-title">Top Sellers</h1>
+        <div class="leaderboard-period">March 2024</div>
+      </div>
+
+      <ul class="leader-list">
+        <li class="leader-item top-3">
+          <div class="rank">1</div>
+          <div class="seller-info">
+            <img
+              src="https://source.unsplash.com/random/100x100?face-1"
+              alt="Sarah Johnson"
+              class="seller-avatar"
+            />
+            <div class="seller-details">
+              <h3 class="seller-name">Sarah Johnson</h3>
+              <p class="seller-category">Electronics</p>
+            </div>
+          </div>
+          <div class="stats">
+            <p class="sales-amount">$142,856</p>
+            <p class="growth">↑ 23%</p>
+          </div>
+        </li>
+
+        <li class="leader-item top-3">
+          <div class="rank">2</div>
+          <div class="seller-info">
+            <img
+              src="https://source.unsplash.com/random/100x100?face-2"
+              alt="Michael Chen"
+              class="seller-avatar"
+            />
+            <div class="seller-details">
+              <h3 class="seller-name">Michael Chen</h3>
+              <p class="seller-category">Home & Garden</p>
+            </div>
+          </div>
+          <div class="stats">
+            <p class="sales-amount">$128,432</p>
+            <p class="growth">↑ 18%</p>
+          </div>
+        </li>
+
+        <li class="leader-item top-3">
+          <div class="rank">3</div>
+          <div class="seller-info">
+            <img
+              src="https://source.unsplash.com/random/100x100?face-3"
+              alt="Emma Davis"
+              class="seller-avatar"
+            />
+            <div class="seller-details">
+              <h3 class="seller-name">Emma Davis</h3>
+              <p class="seller-category">Fashion</p>
+            </div>
+          </div>
+          <div class="stats">
+            <p class="sales-amount">$115,967</p>
+            <p class="growth">↑ 15%</p>
+          </div>
+        </li>
+
+        <li class="leader-item">
+          <div class="rank">4</div>
+          <div class="seller-info">
+            <img
+              src="https://source.unsplash.com/random/100x100?face-4"
+              alt="James Wilson"
+              class="seller-avatar"
+            />
+            <div class="seller-details">
+              <h3 class="seller-name">James Wilson</h3>
+              <p class="seller-category">Sports</p>
+            </div>
+          </div>
+          <div class="stats">
+            <p class="sales-amount">$98,754</p>
+            <p class="growth">↑ 12%</p>
+          </div>
+        </li>
+
+        <li class="leader-item">
+          <div class="rank">5</div>
+          <div class="seller-info">
+            <img
+              src="https://source.unsplash.com/random/100x100?face-5"
+              alt="Lisa Thompson"
+              class="seller-avatar"
+            />
+            <div class="seller-details">
+              <h3 class="seller-name">Lisa Thompson</h3>
+              <p class="seller-category">Beauty</p>
+            </div>
+          </div>
+          <div class="stats">
+            <p class="sales-amount">$87,321</p>
+            <p class="growth">↑ 9%</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

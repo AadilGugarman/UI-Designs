@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart TV App</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: #141414;
+        color: #fff;
+        padding: 20px;
+      }
+
+      .app-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 30px;
+      }
+
+      .nav-item {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .controls {
+        display: flex;
+        gap: 20px;
+      }
+
+      .control-button {
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .section {
+        margin: 30px 0;
+      }
+
+      .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .content-carousel {
+        display: flex;
+        gap: 15px;
+        overflow-x: auto;
+        padding: 10px 0;
+      }
+
+      .content-card {
+        flex: 0 0 250px;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s;
+        position: relative;
+      }
+
+      .content-card:hover {
+        transform: scale(1.05);
+      }
+
+      .content-card img {
+        width: 100%;
+        height: 141px;
+        object-fit: cover;
+      }
+
+      .progress-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background: #e50914;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    Prompt: TV App
+
+    Questions considered:
+    - What type of app is it?
+    - What are the features/controls such as volume, favorites, closed captions, or other languages?
+    - Does it have a carousel selection feature?
+    - Would it be important to have a "Continue Watching" area?
+    - Or other recommendations such as most viewed, recently added, etc.?
+  -->
+    <!-- Prompt: TV App -->
+
+    <!-- What type of app is it? What are the features/controls such as volume, favorites, closed captions, or other languages? Does it have a carousel selection feature?  -->
+
+    <!-- Would it be important to have a “Continue Watching” area? Or other recommendations such as most viewed, recently added, etc.? -->
+
+    <div class="app-container">
+      <header class="header">
+        <nav class="nav-menu">
+          <a href="#" class="nav-item">Home</a>
+          <a href="#" class="nav-item">Movies</a>
+          <a href="#" class="nav-item">TV Shows</a>
+          <a href="#" class="nav-item">My List</a>
+        </nav>
+
+        <div class="controls">
+          <button class="control-button">🔊 Volume</button>
+          <button class="control-button">CC Subtitles</button>
+          <button class="control-button">🌐 Language</button>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">Continue Watching</h2>
+        <div class="content-carousel">
+          <div class="content-card">
+            <img src="https://via.placeholder.com/250x141" alt="Show 1" />
+            <div class="progress-bar" style="width: 70%"></div>
+          </div>
+          <div class="content-card">
+            <img src="https://via.placeholder.com/250x141" alt="Show 2" />
+            <div class="progress-bar" style="width: 30%"></div>
+          </div>
+          <div class="content-card">
+            <img src="https://via.placeholder.com/250x141" alt="Show 3" />
+            <div class="progress-bar" style="width: 50%"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Trending Now</h2>
+        <div class="content-carousel">
+          <div class="content-card">
+            <img src="https://via.placeholder.com/250x141" alt="Trending 1" />
+          </div>
+          <div class="content-card">
+            <img src="https://via.placeholder.com/250x141" alt="Trending 2" />
+          </div>
+          <div class="content-card">
+            <img src="https://via.placeholder.com/250x141" alt="Trending 3" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Recently Added</h2>
+        <div class="content-carousel">
+          <div class="content-card">
+            <img src="https://via.placeholder.com/250x141" alt="New 1" />
+          </div>
+          <div class="content-card">
+            <img src="https://via.placeholder.com/250x141" alt="New 2" />
+          </div>
+          <div class="content-card">
+            <img src="https://via.placeholder.com/250x141" alt="New 3" />
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

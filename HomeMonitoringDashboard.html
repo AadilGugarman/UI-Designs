@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Monitoring Dashboard</title>
+    <!-- 
+      Home Monitoring Dashboard
+
+      Design a home monitoring dashboard. Be creative! What would make a dashboard 
+      visually appealing and fun to use, while also being mindful of its function?
+
+      Try to make it a realistic exercise as if it were your own dashboard... one 
+      that you need to refer to daily. What is the most relevant data and what's 
+      the most appropriate placement for it?
+    -->
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: #f0f2f5;
+        color: #1a1a1a;
+      }
+
+      .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .card {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .status-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .status-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .status-icon.secure {
+        background: #e3f5e5;
+        color: #2e7d32;
+      }
+
+      .status-icon.warning {
+        background: #fff3e0;
+        color: #ef6c00;
+      }
+
+      .temperature {
+        font-size: 36px;
+        font-weight: 600;
+        color: #1a1a1a;
+      }
+
+      .device-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .device-item {
+        display: flex;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .device-item:last-child {
+        border-bottom: none;
+      }
+
+      .device-status {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 12px;
+      }
+
+      .device-status.online {
+        background: #4caf50;
+      }
+
+      .device-status.offline {
+        background: #f44336;
+      }
+
+      .chart {
+        height: 200px;
+        background: linear-gradient(
+          45deg,
+          #f5f5f5 25%,
+          #fafafa 25%,
+          #fafafa 50%,
+          #f5f5f5 50%,
+          #f5f5f5 75%,
+          #fafafa 75%,
+          #fafafa 100%
+        );
+        background-size: 20px 20px;
+        border-radius: 8px;
+        margin-top: 15px;
+      }
+
+      h2 {
+        margin: 0 0 20px 0;
+        font-size: 20px;
+        color: #1a1a1a;
+      }
+
+      .camera-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .camera-feed {
+        background: #2c3e50;
+        border-radius: 8px;
+        aspect-ratio: 16/9;
+        position: relative;
+      }
+
+      .camera-label {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard-grid">
+      <div class="card status-card">
+        <div>
+          <h2>System Status</h2>
+          <p>All systems operational</p>
+        </div>
+        <div class="status-icon secure">✓</div>
+      </div>
+
+      <div class="card">
+        <h2>Temperature</h2>
+        <div class="temperature">72°F</div>
+        <div class="chart"></div>
+      </div>
+
+      <div class="card">
+        <h2>Connected Devices</h2>
+        <ul class="device-list">
+          <li class="device-item">
+            <span class="device-status online"></span>
+            <span>Front Door Lock</span>
+          </li>
+          <li class="device-item">
+            <span class="device-status online"></span>
+            <span>Thermostat</span>
+          </li>
+          <li class="device-item">
+            <span class="device-status offline"></span>
+            <span>Garage Door</span>
+          </li>
+          <li class="device-item">
+            <span class="device-status online"></span>
+            <span>Security System</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Security Cameras</h2>
+        <div class="camera-grid">
+          <div class="camera-feed">
+            <div class="camera-label">Front Door</div>
+          </div>
+          <div class="camera-feed">
+            <div class="camera-label">Backyard</div>
+          </div>
+          <div class="camera-feed">
+            <div class="camera-label">Garage</div>
+          </div>
+          <div class="camera-feed">
+            <div class="camera-label">Side Entry</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

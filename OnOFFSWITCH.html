@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Home Control Panel</title>
+    <!-- 
+      On/Off Switch Design
+      Prompt: On/Off Switch
+
+Consider what's being turned on/off and how it should be done. 
+Is it a push-to-start electric vehicle? A control panel for a smart refrigerator 
+or some other touch-panel display?
+
+      Purpose: Smart Home Control Panel Interface
+      Use Case: Control panel for managing home automation systems
+      Features:
+      - Touch-enabled power buttons for different devices
+      - Visual feedback for device status
+      - Clean, modern interface design
+      - Responsive layout for different screen sizes
+    -->
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: #1a1a1a;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .control-panel {
+        background: #2d2d2d;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .device-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .device-card {
+        background: #383838;
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .device-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .power-button {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 3px solid #64ffda;
+        background: transparent;
+        color: #64ffda;
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+      }
+
+      .power-button.active {
+        background: #64ffda;
+        color: #2d2d2d;
+      }
+
+      .device-name {
+        color: #ffffff;
+        margin: 0;
+        font-size: 1.1em;
+      }
+
+      .device-status {
+        color: #64ffda;
+        font-size: 0.9em;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="control-panel">
+      <div class="device-grid">
+        <div class="device-card">
+          <button class="power-button">⏻</button>
+          <h3 class="device-name">Living Room Lights</h3>
+          <p class="device-status">OFF</p>
+        </div>
+        <div class="device-card">
+          <button class="power-button">⏻</button>
+          <h3 class="device-name">Smart TV</h3>
+          <p class="device-status">OFF</p>
+        </div>
+        <div class="device-card">
+          <button class="power-button">⏻</button>
+          <h3 class="device-name">Air Conditioning</h3>
+          <p class="device-status">OFF</p>
+        </div>
+        <div class="device-card">
+          <button class="power-button">⏻</button>
+          <h3 class="device-name">Security System</h3>
+          <p class="device-status">OFF</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".power-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          button.classList.toggle("active");
+          const status = button.parentElement.querySelector(".device-status");
+          status.textContent = button.classList.contains("active")
+            ? "ON"
+            : "OFF";
+        });
+      });
+    </script>
+  </body>
+</html>

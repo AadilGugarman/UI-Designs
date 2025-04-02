@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Home Settings</title>
+
+    <!-- Prompt: Settings
+         Design settings for something. Is it for security or privacy settings? 
+         Game settings? Light mode vs. dark mode? System settings (sound, 
+         notifications, screen time, Wi-Fi, etc.? -->
+
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #1a1a1a;
+        color: #fff;
+      }
+
+      .settings-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #2d2d2d;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        margin: 0 0 30px 0;
+        font-size: 28px;
+        color: #4caf50;
+        border-bottom: 2px solid #4caf50;
+        padding-bottom: 10px;
+      }
+
+      .room-section {
+        margin-bottom: 40px;
+      }
+
+      .room-title {
+        font-size: 22px;
+        color: #81c784;
+        margin-bottom: 20px;
+      }
+
+      .device-control {
+        background: #3d3d3d;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 15px;
+      }
+
+      .device-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .device-name {
+        font-size: 18px;
+        color: #a5d6a7;
+      }
+
+      .device-status {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .control-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+      }
+
+      .control-item {
+        background: #4d4d4d;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .temperature-control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .temp-value {
+        font-size: 24px;
+        color: #4caf50;
+      }
+
+      .light-intensity {
+        width: 100%;
+        height: 4px;
+        background: #666;
+        border-radius: 2px;
+        margin: 10px 0;
+      }
+
+      .light-value {
+        width: 70%;
+        height: 100%;
+        background: #4caf50;
+        border-radius: 2px;
+      }
+
+      .security-status {
+        display: inline-block;
+        padding: 8px 15px;
+        border-radius: 20px;
+        background: #388e3c;
+        color: white;
+        font-size: 14px;
+      }
+
+      .energy-stats {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        padding: 15px;
+        background: #333;
+        border-radius: 10px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-value {
+        font-size: 20px;
+        color: #4caf50;
+        margin-bottom: 5px;
+      }
+
+      .stat-label {
+        font-size: 12px;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="settings-container">
+      <h1>Smart Home Control Center</h1>
+
+      <div class="room-section">
+        <h2 class="room-title">Living Room</h2>
+        <div class="device-control">
+          <div class="device-header">
+            <span class="device-name">Smart Thermostat</span>
+            <span class="device-status">Active</span>
+          </div>
+          <div class="temperature-control">
+            <span class="temp-value">72°F</span>
+            <span class="device-status">Energy Saving Mode</span>
+          </div>
+        </div>
+
+        <div class="device-control">
+          <div class="device-header">
+            <span class="device-name">Smart Lighting</span>
+            <span class="device-status">On</span>
+          </div>
+          <div class="light-intensity">
+            <div class="light-value"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-section">
+        <h2 class="room-title">Security System</h2>
+        <div class="device-control">
+          <div class="device-header">
+            <span class="device-name">Main Security System</span>
+            <span class="security-status">Armed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="energy-stats">
+        <div class="stat-item">
+          <div class="stat-value">2.4kWh</div>
+          <div class="stat-label">Today's Usage</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">-15%</div>
+          <div class="stat-label">vs Last Week</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">$45.20</div>
+          <div class="stat-label">Monthly Bill</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
