@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Transit Map</title>
+    <!-- 
+      Prompt: Map Design
+
+      Not one of those old school paper ones though. Actually, that might be kinda neat. ;)
+ 
+      What type of information should it have? Should its color scheme compliment the brand? 
+      Is it for food delivery? Or an interactive map of train stations?
+    -->
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: #f7f9fc;
+      }
+
+      .map-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+      }
+
+      .map {
+        flex: 1;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .map-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" fill="none" stroke="%23e1e8ed" stroke-width="0.5"/></svg>');
+      }
+
+      .station {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: #2196f3;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .station:hover {
+        transform: scale(1.5);
+      }
+
+      .line {
+        position: absolute;
+        height: 4px;
+        background: #2196f3;
+        opacity: 0.6;
+      }
+
+      .sidebar {
+        width: 300px;
+        background: white;
+        box-shadow: -2px 0 12px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        overflow-y: auto;
+      }
+
+      .station-info {
+        margin-bottom: 24px;
+      }
+
+      .station-name {
+        font-size: 20px;
+        color: #2c3e50;
+        margin: 0 0 12px;
+      }
+
+      .station-details {
+        color: #7f8c8d;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .legend {
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid #e1e8ed;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        color: #34495e;
+      }
+
+      .legend-color {
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+        margin-right: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="map-container">
+      <div class="map">
+        <div class="map-overlay"></div>
+        <!-- Sample stations and lines -->
+        <div class="station" style="top: 30%; left: 40%"></div>
+        <div class="station" style="top: 45%; left: 55%"></div>
+        <div
+          class="line"
+          style="top: 32%; left: 41%; width: 180px; transform: rotate(30deg)"
+        ></div>
+      </div>
+      <div class="sidebar">
+        <div class="station-info">
+          <h2 class="station-name">Central Station</h2>
+          <div class="station-details">
+            <p>Next train: 5 minutes</p>
+            <p>Platform: 3</p>
+            <p>Lines: Blue, Red</p>
+            <p>Facilities: Elevator, Restroom</p>
+          </div>
+        </div>
+        <div class="legend">
+          <h3>Transit Lines</h3>
+          <div class="legend-item">
+            <div class="legend-color" style="background: #2196f3"></div>
+            Blue Line
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background: #e74c3c"></div>
+            Red Line
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

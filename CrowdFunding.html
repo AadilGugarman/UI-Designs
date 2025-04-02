@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crowdfunding Campaign</title>
+
+    <!-- Prompt: Crowdfunding Keep in mind the purpose... raising funds. It's
+    important to make a design simple and compelling if you're seeking money. Is
+    it for startups to raise money from investors? (Such as on WeFunder,
+    Republic, StartEngine) Or raising funds for a community cause like funding
+    the restoration of a historical monument? So what's really important? The
+    number of contributors, the total amount raised, campaign details, and
+    highlights? Also consider size, imagery, placement, slogans, etc.
+    Crowdfunding Design Considerations: - Is it for startups to raise money from
+    investors? (WeFunder, Republic, StartEngine style) - Or raising funds for a
+    community cause like funding historical monument restoration? - Key
+    elements: Number of contributors, total amount raised, campaign details,
+    highlights - Important factors: Size, imagery, placement, slogans  -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #2c3e50;
+        background: #f8f9fa;
+      }
+
+      .campaign-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .hero-section {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 40px;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+
+      .campaign-stats {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        text-align: center;
+      }
+
+      .stat-item h2 {
+        font-size: 2.5rem;
+        color: #2196f3;
+        margin-bottom: 8px;
+      }
+
+      .stat-item p {
+        color: #666;
+        font-size: 1.1rem;
+      }
+
+      .progress-bar {
+        height: 12px;
+        background: #e0e0e0;
+        border-radius: 6px;
+        margin: 20px 0;
+      }
+
+      .progress {
+        width: 75%;
+        height: 100%;
+        background: #2196f3;
+        border-radius: 6px;
+        transition: width 0.3s ease;
+      }
+
+      .campaign-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+      }
+
+      .main-content {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .campaign-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .campaign-description {
+        color: #666;
+        margin-bottom: 30px;
+      }
+
+      .highlight-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .highlight-item {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .contribute-section {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 20px;
+      }
+
+      .contribute-button {
+        width: 100%;
+        padding: 16px;
+        background: #2196f3;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .contribute-button:hover {
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="campaign-container">
+      <div class="hero-section">
+        <img
+          src="https://source.unsplash.com/random/1200x500"
+          alt="Campaign Image"
+          class="hero-image"
+        />
+      </div>
+
+      <div class="campaign-stats">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h2>$875,000</h2>
+            <p>Raised of $1M Goal</p>
+          </div>
+          <div class="stat-item">
+            <h2>1,234</h2>
+            <p>Contributors</p>
+          </div>
+          <div class="stat-item">
+            <h2>15</h2>
+            <p>Days Left</p>
+          </div>
+        </div>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+
+      <div class="campaign-content">
+        <div class="main-content">
+          <h1 class="campaign-title">Revolutionary Green Energy Solution</h1>
+          <p class="campaign-description">
+            We're developing innovative technology to make renewable energy more
+            accessible and affordable for everyone. Our solution combines
+            advanced solar technology with AI-powered optimization to maximize
+            energy efficiency.
+          </p>
+
+          <div class="highlight-grid">
+            <div class="highlight-item">
+              <h3>🌱 Sustainable Impact</h3>
+              <p>
+                Reduce carbon emissions by 50% compared to traditional solutions
+              </p>
+            </div>
+            <div class="highlight-item">
+              <h3>💡 Innovation</h3>
+              <p>Patented technology with multiple use cases</p>
+            </div>
+            <div class="highlight-item">
+              <h3>📈 Market Potential</h3>
+              <p>$50B addressable market by 2025</p>
+            </div>
+            <div class="highlight-item">
+              <h3>👥 Expert Team</h3>
+              <p>Led by industry veterans with 20+ years experience</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contribute-section">
+          <h2>Support This Project</h2>
+          <p style="margin: 20px 0">
+            Join us in revolutionizing the renewable energy sector
+          </p>
+          <button class="contribute-button">Contribute Now</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

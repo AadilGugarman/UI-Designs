@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscribe to Learning Platform</title>
+
+    <!-- Prompt: Subscribe
+ 
+What is a person subscribing to? A streaming service, a video course, 
+or a consultation service? Is it just a button or a widget?
+ What type of information are you looking to capture from the user? 
+Their name and email? Their country, state, or postal code? Age consent? Something else?  -->
+    <!-- 
+      Prompt: Subscribe Form
+
+      This subscription form is for an online learning platform that offers video courses.
+      We capture essential user information including:
+      - Full name for personalization
+      - Email for account creation and communications
+      - Age verification (must be 16+)
+      - Country for content/pricing localization
+    -->
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: #f7f9fc;
+      }
+
+      .subscribe-container {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 480px;
+      }
+
+      h1 {
+        color: #2c3e50;
+        margin: 0 0 24px;
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #34495e;
+        font-weight: 500;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e1e8ed;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border-color 0.2s;
+      }
+
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: #2196f3;
+      }
+
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .checkbox-group input {
+        width: auto;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #2196f3, #1976d2);
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+      }
+
+      .terms {
+        margin-top: 16px;
+        font-size: 14px;
+        color: #7f8c8d;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="subscribe-container">
+      <h1>Start Learning Today</h1>
+      <form>
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input
+            type="text"
+            id="fullname"
+            required
+            placeholder="Enter your full name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="you@example.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select id="country" required>
+            <option value="">Select your country</option>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ca">Canada</option>
+            <option value="au">Australia</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="age-verify" required />
+          <label for="age-verify">I confirm that I am 16 years or older</label>
+        </div>
+
+        <button type="submit">Start Your Learning Journey</button>
+
+        <p class="terms">
+          By subscribing, you agree to our Terms of Service and Privacy Policy
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
